@@ -4,7 +4,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        int winPlayer=0;
+        int winPlayer;
         int roboplayer=0;
         int w1=0;
         int w2=0;
@@ -91,7 +91,6 @@ public class Main
                 if(roboplayer==0&&t!=0)
                 {
                     int w=0;
-                    int h=0;
                     for (int i = 0; i < 3; i++)
                     {
                         for (int a = 0; a < 3; a++)
@@ -104,7 +103,6 @@ public class Main
                             {
                                 w2++;
                             }
-
                         }
                         if (w1 == 2&&w2!=1&&w!=1)
                         {
@@ -117,7 +115,6 @@ public class Main
                                 }
                             }
                         }
-                        else{h++;}
                         w1 = 0;
                         w2 = 0;
                     }
@@ -133,7 +130,6 @@ public class Main
                             {
                                 w2++;
                             }
-
                         }
                         if (w1 == 2&&w2!=1&&w!=1)
                         {
@@ -146,14 +142,9 @@ public class Main
                                 }
                             }
                         }
-                        else
-                        {
-                            h++;
-                        }
                         w1 = 0;
                         w2 = 0;
                     }
-                    h=0;
                     if(XYarray[0][0]==XYarray[1][1]&&XYarray[1][1].writeEmpty()==1&&w!=1)
                     {
                         if(XYarray[2][2].writeEmpty()==0)XYarray[2][2]=new Krest();
@@ -199,7 +190,6 @@ public class Main
                 if(roboplayer==1&&t!=0)
                 {
                     int w=0;
-                    int h=0;
                     for (int i = 0; i < 3; i++)
                     {
                         for (int a = 0; a < 3; a++)
@@ -212,7 +202,6 @@ public class Main
                             {
                                 w2++;
                             }
-
                         }
                         if (w2 == 2&&w1!=1&&w!=1)
                         {
@@ -225,7 +214,6 @@ public class Main
                                 }
                             }
                         }
-                        else{h++;}
                         w1 = 0;
                         w2 = 0;
                     }
@@ -254,14 +242,9 @@ public class Main
                                 }
                             }
                         }
-                        else
-                        {
-                            h++;
-                        }
                         w1 = 0;
                         w2 = 0;
                     }
-                    h=0;
                     if(XYarray[0][0].writeEmpty()==XYarray[1][1].writeEmpty()&&XYarray[1][1].writeEmpty()==2&&w!=1)
                     {
                         if(XYarray[2][2].writeEmpty()==0)XYarray[2][2]=new Zero();
