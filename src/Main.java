@@ -75,7 +75,7 @@ public class Main
                     }
                     if (t==0)player = 1;
                 }
-                if(player==1&&roboplayer==0)
+              else if(player==1&&roboplayer==0)
                 {
                     if(XYarray[x-1][y-1].writeEmpty()==0)
                     {
@@ -91,6 +91,36 @@ public class Main
                 if(roboplayer==0&&t!=0)
                 {
                     int w=0;
+                    if((XYarray[0][0].writeEmpty()==XYarray[1][1].writeEmpty()&&XYarray[1][1].writeEmpty()==1)&&(w!=1))
+                    {
+                        if(XYarray[2][2].writeEmpty()==0){XYarray[2][2]=new Krest();
+                            w=1;}
+                    }
+                    if((XYarray[1][1].writeEmpty()==XYarray[2][2].writeEmpty()&&XYarray[1][1].writeEmpty()==1)&&(w!=1))
+                    {
+                        if(XYarray[0][0].writeEmpty()==0){XYarray[0][0]=new Krest();
+                            w=1;}
+                    }
+                    if(XYarray[0][0].writeEmpty()==XYarray[2][2].writeEmpty()&&XYarray[0][0].writeEmpty()==1&&w!=1)
+                    {
+                        if(XYarray[1][1].writeEmpty()==0){XYarray[1][1]=new Krest();
+                            w=1;}
+                    }
+                    if(XYarray[2][0].writeEmpty()==XYarray[1][1].writeEmpty()&&XYarray[1][1].writeEmpty()==1&&w!=1)
+                    {
+                        if(XYarray[0][2].writeEmpty()==0){XYarray[0][2]=new Krest();
+                            w=1;}
+                    }
+                    if(XYarray[2][0].writeEmpty()==XYarray[0][2].writeEmpty()&&XYarray[2][0].writeEmpty()==1&&w!=1)
+                    {
+                        if(XYarray[1][1].writeEmpty()==0){XYarray[1][1]=new Krest();
+                            w=1;}
+                    }
+                    if(XYarray[1][1].writeEmpty()==XYarray[0][2].writeEmpty()&&XYarray[1][1].writeEmpty()==1&&w!=1)
+                    {
+                        if(XYarray[2][0].writeEmpty()==0){XYarray[2][0]=new Krest();
+                            w=1;}
+                    }
                     for (int i = 0; i < 3; i++)
                     {
                         for (int a = 0; a < 3; a++)
@@ -104,7 +134,18 @@ public class Main
                                 w2++;
                             }
                         }
-                        if (w1 == 2&&w2!=1&&w!=1)
+                        if (w1 == 0&&w2==2&&w!=1)
+                        {
+                            for(int k=0;k<3;k++)
+                            {
+                                if (XYarray[k][i].writeEmpty()==0&&w!=1)
+                                {
+                                    XYarray[k][i]=new Krest();
+                                    w=1;
+                                }
+                            }
+                        }
+                        if (w1 == 2&&w2==0&&w!=1)
                         {
                             for(int k=0;k<3;k++)
                             {
@@ -131,7 +172,18 @@ public class Main
                                 w2++;
                             }
                         }
-                        if (w1 == 2&&w2!=1&&w!=1)
+                        if (w1 == 0&&w2==2&&w!=1)
+                        {
+                            for(int k=0;k<3;k++)
+                            {
+                                if (XYarray[i][k].writeEmpty()==0&&w!=1)
+                                {
+                                    XYarray[i][k]=new Krest();
+                                    w=1;
+                                }
+                            }
+                        }
+                        if (w1 == 2&&w2==0&&w!=1)
                         {
                             for(int k=0;k<3;k++)
                             {
@@ -145,34 +197,29 @@ public class Main
                         w1 = 0;
                         w2 = 0;
                     }
-                    if(XYarray[0][0]==XYarray[1][1]&&XYarray[1][1].writeEmpty()==1&&w!=1)
+                    if(w!=1&&XYarray[1][1].writeEmpty()==0)
                     {
-                        if(XYarray[2][2].writeEmpty()==0)XYarray[2][2]=new Krest();
+                      XYarray[1][1]=new Krest();
+                      w=1;
+                    }
+                    if(w!=1&&XYarray[0][0].writeEmpty()==0)
+                    {
+                        XYarray[0][0]=new Krest();
                         w=1;
                     }
-                    if(XYarray[1][1]==XYarray[2][2]&&XYarray[1][1].writeEmpty()==1&&w!=1)
+                    if(w!=1&&XYarray[2][2].writeEmpty()==0)
                     {
-                        if(XYarray[0][0].writeEmpty()==0)XYarray[0][0]=new Krest();
+                        XYarray[2][2]=new Krest();
                         w=1;
                     }
-                    if(XYarray[0][0]==XYarray[2][2]&&XYarray[0][0].writeEmpty()==1&&w!=1)
+                    if(w!=1&&XYarray[2][0].writeEmpty()==0)
                     {
-                        if(XYarray[1][1].writeEmpty()==0)XYarray[1][1]=new Krest();
+                        XYarray[2][0]=new Krest();
                         w=1;
                     }
-                    if(XYarray[2][0]==XYarray[1][1]&&XYarray[1][1].writeEmpty()==1&&w!=1)
+                    if(w!=1&&XYarray[0][2].writeEmpty()==0)
                     {
-                        if(XYarray[0][2].writeEmpty()==0)XYarray[0][2]=new Krest();
-                        w=1;
-                    }
-                    if(XYarray[2][0]==XYarray[0][2]&&XYarray[2][0].writeEmpty()==1&&w!=1)
-                    {
-                        if(XYarray[1][1].writeEmpty()==0)XYarray[1][1]=new Krest();
-                        w=1;
-                    }
-                    if(XYarray[1][1]==XYarray[0][2]&&XYarray[1][1].writeEmpty()==1&&w!=1)
-                    {
-                        if(XYarray[2][0].writeEmpty()==0)XYarray[2][0]=new Krest();
+                        XYarray[0][2]=new Krest();
                         w=1;
                     }
                     if(w!=1)
@@ -190,6 +237,49 @@ public class Main
                 if(roboplayer==1&&t!=0)
                 {
                     int w=0;
+                    if(XYarray[0][0].writeEmpty()==XYarray[1][1].writeEmpty()&&XYarray[1][1].writeEmpty()==2&&w!=1)
+                    {
+                        if(XYarray[2][2].writeEmpty()==0)
+                        {
+                            XYarray[2][2] = new Zero();
+                            w = 1;
+                        }
+                    }
+                    if(XYarray[1][1].writeEmpty()==XYarray[2][2].writeEmpty()&&XYarray[1][1].writeEmpty()==2&&w!=1)
+                    {
+                        if(XYarray[0][0].writeEmpty()==0)
+                        {XYarray[0][0]=new Zero();
+                            w=1;
+                        }
+                    }
+                    if(XYarray[0][0].writeEmpty()==XYarray[2][2].writeEmpty()&&XYarray[0][0].writeEmpty()==2&&w!=1)
+                    {
+                        if(XYarray[1][1].writeEmpty()==0)
+                        {XYarray[1][1]=new Zero();
+                            w=1;
+                        }
+                    }
+                    if(XYarray[2][0].writeEmpty()==XYarray[1][1].writeEmpty()&&XYarray[1][1].writeEmpty()==2&&w!=1)
+                    {
+                        if(XYarray[0][2].writeEmpty()==0)
+                        {XYarray[0][2]=new Zero();
+                            w=1;
+                        }
+                    }
+                    if(XYarray[2][0].writeEmpty()==XYarray[0][2].writeEmpty()&&XYarray[2][0].writeEmpty()==2&&w!=1)
+                    {
+                        if(XYarray[1][1].writeEmpty()==0)
+                        {XYarray[1][1]=new Zero();
+                            w=1;
+                        }
+                    }
+                    if(XYarray[1][1].writeEmpty()==XYarray[0][2].writeEmpty()&&XYarray[1][1].writeEmpty()==2&&w!=1)
+                    {
+                        if(XYarray[2][0].writeEmpty()==0)
+                        {XYarray[2][0]=new Zero();
+                            w=1;
+                        }
+                    }
                     for (int i = 0; i < 3; i++)
                     {
                         for (int a = 0; a < 3; a++)
@@ -203,7 +293,18 @@ public class Main
                                 w2++;
                             }
                         }
-                        if (w2 == 2&&w1!=1&&w!=1)
+                        if (w2 == 0&&w1==2&&w!=1)
+                        {
+                            for(int k=0;k<3;k++)
+                            {
+                                if (XYarray[k][i].writeEmpty()==0&&w!=1)
+                                {
+                                    XYarray[k][i]=new Zero();
+                                    w=1;
+                                }
+                            }
+                        }
+                        if (w2 == 2&&w1==0&&w!=1)
                         {
                             for(int k=0;k<3;k++)
                             {
@@ -229,9 +330,19 @@ public class Main
                             {
                                 w2++;
                             }
-
                         }
-                        if (w2 == 2&&w1!=1&&w!=1)
+                        if (w2 == 0&&w1==2&&w!=1)
+                        {
+                            for(int k=0;k<3;k++)
+                            {
+                                if (XYarray[i][k].writeEmpty()==0&&w!=1)
+                                {
+                                    XYarray[i][k]=new Zero();
+                                    w=1;
+                                }
+                            }
+                        }
+                        if (w2 == 2&&w1==0&&w!=1)
                         {
                             for(int k=0;k<3;k++)
                             {
@@ -245,37 +356,32 @@ public class Main
                         w1 = 0;
                         w2 = 0;
                     }
-                    if(XYarray[0][0].writeEmpty()==XYarray[1][1].writeEmpty()&&XYarray[1][1].writeEmpty()==2&&w!=1)
+                    if(w!=1&&XYarray[1][1].writeEmpty()==0)
                     {
-                        if(XYarray[2][2].writeEmpty()==0)XYarray[2][2]=new Zero();
+                        XYarray[1][1]=new Zero();
                         w=1;
                     }
-                    if(XYarray[1][1].writeEmpty()==XYarray[2][2].writeEmpty()&&XYarray[1][1].writeEmpty()==2&&w!=1)
+                    if(w!=1&&XYarray[0][0].writeEmpty()==0)
                     {
-                        if(XYarray[0][0].writeEmpty()==0)XYarray[0][0]=new Zero();
+                        XYarray[0][0]=new Zero();
                         w=1;
                     }
-                    if(XYarray[0][0].writeEmpty()==XYarray[2][2].writeEmpty()&&XYarray[0][0].writeEmpty()==2&&w!=1)
+                    if(w!=1&&XYarray[2][2].writeEmpty()==0)
                     {
-                        if(XYarray[1][1].writeEmpty()==0)XYarray[1][1]=new Zero();
+                        XYarray[2][2]=new Zero();
                         w=1;
                     }
-                    if(XYarray[2][0].writeEmpty()==XYarray[1][1].writeEmpty()&&XYarray[1][1].writeEmpty()==2&&w!=1)
+                    if(w!=1&&XYarray[2][0].writeEmpty()==0)
                     {
-                        if(XYarray[0][2].writeEmpty()==0)XYarray[0][2]=new Zero();
+                        XYarray[2][0]=new Zero();
                         w=1;
                     }
-                    if(XYarray[2][0].writeEmpty()==XYarray[0][2].writeEmpty()&&XYarray[2][0].writeEmpty()==2&&w!=1)
+                    if(w!=1&&XYarray[0][2].writeEmpty()==0)
                     {
-                        if(XYarray[1][1].writeEmpty()==0)XYarray[1][1]=new Zero();
+                        XYarray[0][2]=new Zero();
                         w=1;
                     }
-                    if(XYarray[1][1].writeEmpty()==XYarray[0][2].writeEmpty()&&XYarray[1][1].writeEmpty()==2&&w!=1)
-                    {
-                        if(XYarray[2][0].writeEmpty()==0)XYarray[2][0]=new Zero();
-                        w=1;
-                    }
-                    if(w!=0)
+                    if(w!=1)
                     {
                         int xr=0;
                         int yr=0;

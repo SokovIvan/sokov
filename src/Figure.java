@@ -1,4 +1,5 @@
-public interface Figure {
+public interface Figure
+{
     void write();
     int writeEmpty();
 }
