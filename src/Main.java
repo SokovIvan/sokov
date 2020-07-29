@@ -73,6 +73,13 @@ public class Main
                   check.checkVictory(XYarray);
                   winPlayer=check.winPlay;
                   win=check.winP;
+                for (int i = 0; i < 3; i++)
+                {
+                    for (int a = 0; a < 3; a++) {
+                        XYarray[a][i].write();
+                    }
+                    System.out.print("\n");
+                }
             }
             if (winPlayer == 1)System.out.println("Победил игрок 1");
             if (winPlayer == 2)System.out.println("Победил игрок 2");

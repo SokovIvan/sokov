@@ -66,13 +66,6 @@ public class Check {
         }
         w1 = 0;
         w2 = 0;
-        for (int i = 0; i < 3; i++)
-        {
-            for (int a = 0; a < 3; a++) {
-                XYarray[a][i].write();
-            }
-            System.out.print("\n");
-        }
     }
 }
 

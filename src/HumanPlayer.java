@@ -24,7 +24,10 @@ public class HumanPlayer {
             {
                 System.out.println("Ошибка");
             }
-            if (tH==0)playerH = 1;
+            if (tH==0)
+            {
+                playerH=1;
+            }
         }
         else if(playerH==1&&roboplayerH==0)
         {
@@ -37,7 +40,10 @@ public class HumanPlayer {
             {
                 System.out.println("Ошибка");
             }
-            if (tH==0) playerH=0;
+            if (tH==0)
+            {
+                playerH=0;
+            }
         }
     }
 }
