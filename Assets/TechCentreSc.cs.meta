@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 52335b4108898614c92b32e79e58515e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - slider: {instanceID: 0}
+  - robot: {instanceID: 0}
+  - soldier: {instanceID: 0}
+  - button0: {instanceID: 0}
+  - button1: {instanceID: 0}
+  - button2: {instanceID: 0}
+  - button3: {instanceID: 0}
+  - selfB: {instanceID: 0}
+  - flag: {fileID: 4438810224016535608, guid: ff07ad16bd1c666428a81e847cb2a4c4, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
