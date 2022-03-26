@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ScSr.unity
+    guid: 37df250dd4079424f8c74309938db541
+  - enabled: 1
+    path: Assets/Scenes/Sc.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/ScSc.unity
+    guid: fa265f6521de2d543af189e848e9994f
+  - enabled: 1
+    path: Assets/ScSc2.unity
+    guid: e9ebc48057475f740ab03ffc2f147ff8
+  - enabled: 1
+    path: Assets/ScSt1.unity
+    guid: 4bec6bb5fe254064595d68b4d224b6fc
+  - enabled: 1
+    path: Assets/ScSt2.unity
+    guid: 2384317bcf58ac64996ead1f593fe206
+  - enabled: 1
+    path: "Assets/S\u04412.unity"
+    guid: fdbe0760e7fea5444a1ee546479e3048
+  - enabled: 1
+    path: Assets/Victory1.unity
+    guid: fef8e2f596774cb458e0ffcd4bec8c28
+  - enabled: 1
+    path: Assets/Battle.unity
+    guid: 32d4ddde95743cd48b692c240f4293b8
+  - enabled: 1
+    path: Assets/Start.unity
+    guid: 1ac6e30811d58b444bcdbcbcf9835e3a
+  - enabled: 1
+    path: Assets/Sc4.unity
+    guid: 6f662c46194fa3c4988559f50d851d81
+  - enabled: 1
+    path: Assets/Sc5.unity
+    guid: 63d0842926ac7b342a42d5506dcc7aaf
+  - enabled: 1
+    path: Assets/Library.unity
+    guid: d1e45c57c042977439ab800839a4a71e
+  - enabled: 1
+    path: Assets/Sc6.unity
+    guid: 0fe60bbe62e166e41a4efece5f243113
+  - enabled: 1
+    path: Assets/Sc7.unity
+    guid: befa62b071830a74c9475a1f10994ab0
+  - enabled: 1
+    path: Assets/Sc8.unity
+    guid: ec686544ab110d6418bb2019dfa94c2b
+  - enabled: 1
+    path: Assets/Sc9.unity
+    guid: 7f99c57ce45de3c4d809a2605ed09ab0
+  - enabled: 1
+    path: Assets/Sc10.unity
+    guid: ef054e7e209c4be4b90e8577b03e12ed
+  - enabled: 1
+    path: Assets/Victory!!!.unity
+    guid: a0e97ba3c365013499638455d53ab50c
+  - enabled: 1
+    path: Assets/Battle2.unity
+    guid: c02df4aeb912def44b1241fc044a143f
+  - enabled: 1
+    path: Assets/Test.unity
+    guid: b95c3ae64dc14a34e88ed4cbc3d79f07
+  - enabled: 0
+    path: Assets/NULLcode Studio/FogOfWar/Scenes/Demo.unity
+    guid: 96a2713e26e50a44cae552144e63e2dc
+  - enabled: 1
+    path: Assets/Victory2!!!.unity
+    guid: 5e4720004c2cef1409b8b8d12bf221d0
+  - enabled: 1
+    path: Assets/Defeat!!!.unity
+    guid: 81ad26ac86c7d6244adf1f9922c005a4
+  - enabled: 1
+    path: Assets/Defeat2!!!.unity
+    guid: c93df242871588f478d58a1a1d24c85c
+  - enabled: 1
+    path: Assets/Title.unity
+    guid: 910404db6a7028140b97c76f3f403c19
+  m_configObjects: {}
